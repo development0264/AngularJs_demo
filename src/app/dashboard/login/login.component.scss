@@ -1,0 +1,49 @@
+.login__wrp {
+  height: 100vh;
+  display: flex;
+  align-items: baseline;
+
+  .container{
+    margin-top: 100px;
+  }
+
+}
+
+.text__logo {
+  font-size: 35px;
+  margin-bottom: 80px;
+  text-align: center;
+  color: #1B0833;
+}
+
+.login__wrp .form-control {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  border: 0;
+  height: 50px;
+  background: #CAB4E0;
+  box-shadow: inset -8px -8px 20px 0 #EAD3FF, inset 8px 8px 10px 0 #847099;
+  border-radius: 46px;
+  font-size: 18px;
+  font-family: 'Muli-Regular';
+  padding-left: 30px;
+}
+
+.form__submit button {
+  background: #1A0A2C;
+  box-shadow: -3px -3px 5px 0 #443357, 3px 3px 5px 0 #443357;
+  border-radius: 25px;
+  font-family: Muli-Regular;
+  font-size: 20px;
+  color: #CAB4E0;
+  letter-spacing: 0;
+  border: 0;
+  width: 100%;
+  max-width: 235px;
+}
+
+.form__submit {
+  text-align: center;
+  margin-top: 3rem;
+}

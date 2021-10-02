@@ -1,0 +1,383 @@
+header {
+  padding-top: 20px;
+  .left__side {
+    display: flex;
+  }
+
+  .menu__app {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    cursor: pointer;
+  }
+
+  .menu__app .icon {
+    width: 15px;
+    margin-right: 10px;
+  }
+
+  .menu__app .text {
+    font-family: "Muli-Bold";
+  }
+
+  .right__side {
+    display: flex;
+    justify-content: flex-end;
+  }
+  ::ng-deep .calendar mat-form-field {
+    background-color: #1a0a2c;
+  }
+
+  ::ng-deep .calendar input {
+    color: #1a0a2c !important;
+    cursor: pointer;
+  }
+
+  ::ng-deep .calendar input::placeholder {
+    color: #1a0a2c !important;
+  }
+  ::ng-deep .mat-date-range-input-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  ::ng-deep .calendar .mat-form-field-wrapper {
+    padding-bottom: 0 !important;
+  }
+
+  .menu__app.calendar.desktop {
+    justify-content: flex-end;
+    margin: 0 !important;
+  }
+  .menu__app.country.desktop {
+    margin: 0 !important;
+  }
+
+  ::ng-deep .calendar .mat-form-field-appearance-fill .mat-form-field-infix {
+    border-top: 0 !important;
+  }
+
+  ::ng-deep .calendar .mat-form-field-appearance-fill .mat-form-field-flex {
+    padding-top: 0 !important;
+  }
+
+  header .menu__app {
+    height: 33px !important;
+  }
+
+  ::ng-deep .mat-form-field-wrapper {
+    padding-bottom: 0;
+  }
+
+  ::ng-deep mat-date-range-input {
+    background-color: #cab4e0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  ::ng-deep .mat-date-range-input-container {
+    justify-content: center;
+  }
+
+  ::ng-deep .country mat-form-field {
+    background-color: #cab4e0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  ::ng-deep .mat-select-value {
+    color: #1a0a2c !important;
+  }
+
+  ::ng-deep mat-label {
+    color: #fff;
+  }
+}
+
+.main__download .main__lead {
+  display: flex;
+  align-items: center;
+}
+
+.main__download .main__lead .main__icon {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.country select.form-select {
+  background-color: #cab4e0;
+  color: #1a0a2c;
+  border-radius: 10px;
+  border: 0;
+  height: 33px;
+  white-space: nowrap;
+  width: 130px;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.country select.form-select:focus {
+  box-shadow: none;
+  border: 0;
+}
+
+.form-select {
+  background-image: url(./../../../assets/img/caret-down.png);
+  background-size: contain;
+  background-position: right;
+}
+
+@media (max-width: 991px) {
+  .menu__app .text {
+    display: none;
+  }
+}
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none !important;
+}
+
+@media (max-width: 991px) {
+  .desktop {
+    display: none !important;
+  }
+  .mobile {
+    display: block !important;
+  }
+  header {
+    background-color: #1a0a2c;
+    padding-bottom: 20px;
+  }
+  header .menu__app .icon {
+    width: 20px !important;
+  }
+
+  header .menu__app:last-child {
+    margin-right: 0 !important;
+  }
+
+  header .right__side .menu__app:last-child {
+    margin-right: 0 !important;
+  }
+  ::ng-deep header .menu__app {
+    margin-right: 0 !important;
+  }
+}
+
+::ng-deep .mat-date-range-input-start-wrapper {
+  width: 100%;
+}
+
+.icon img {
+  width: 30px;
+  object-fit: contain;
+  height: 30px;
+}
+
+::ng-deep .mat-date-range-input-separator {
+  color: #1a0a2c !important;
+  margin-left: -4px !important;
+  opacity: 1 !important;
+}
+
+.menu__app.mobile .icon {
+  margin-left: 10px;
+}
+
+::ng-deep .consumer-houm {
+  background-color: #160432;
+}
+
+header .menu__app .text {
+  color: #cab4e0;
+}
+
+.export button {
+  background-color: #cab4e0 !important;
+  color: #1a0a2c !important;
+  border: 0;
+  height: 33px;
+  border-radius: 10px;
+  margin-left: 20px;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.sign_out {
+  background-color: #cab4e0 !important;
+  color: #1a0a2c !important;
+  border: 0;
+  height: 33px;
+  border-radius: 10px;
+  margin-left: 20px;
+  width: 180px;
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+table#ejemplo {
+  background-color: #cab4e0;
+  margin-top: 40px !important;
+}
+
+table#ejemplo thead {
+  background-color: #443357;
+  color: #cab4e0 !important;
+}
+
+table#ejemplo tbody tr td {
+  color: #1a0a2c !important;
+  padding: 1rem 0.5rem;
+}
+
+::ng-deep div#ejemplo_info {
+  color: #cab4e0 !important;
+}
+
+::ng-deep ul.pagination li a {
+  background-color: #443357 !important;
+  border: 0;
+  color: #cab4e0 !important;
+}
+
+::ng-deep .pagination li.active a {
+  background-color: #c0abd5 !important;
+  color: #1a0a2c !important;
+}
+
+table#ejemplo.table-bordered.dataTable th,
+table.table-bordered.dataTable td {
+  border: 0;
+}
+
+// table#ejemplo th span {
+//   white-space: pre;
+// }
+
+table#ejemplo.table-bordered.dataTable th {
+  width: auto !important;
+}
+#ejemplo thead tr {
+  vertical-align: baseline;
+}
+#ejemplo thead tr th:before,
+#ejemplo thead tr th:after {
+  top: 6px;
+}
+::ng-deep div#ejemplo_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.no-data-main {
+  height: calc(100% - 60px);
+}
+.no-data {
+  color: #cab4e0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mat-paginator {
+  background: transparent;
+  color: #cab4e0;
+}
+::ng-deep .mat-paginator-navigation-previous,
+::ng-deep .mat-paginator-navigation-next {
+  color: #cab4e0 !important;
+}
+
+.menu__app.calendar.desktop {
+  flex: 0 0 45%;
+  justify-content: center;
+}
+
+.menu__app.country.desktop {
+  flex: 0 0 13.75%;
+  justify-content: center;
+}
+
+.menu__app.export.desktop {
+  margin-right: 0 !important;
+}
+
+.menu__app.reset.sign_out.desktop {
+  margin-right: 0;
+}
+.menu__app.export.desktop {
+  flex: 0 0 13.75%;
+  justify-content: center;
+}
+
+.menu__app.reset.sign_out.desktop button {
+  display: flex !important;
+}
+
+.menu__app.sign_out.desktop {
+  flex: 0 0 13.75%;
+  justify-content: center;
+}
+
+.sign__out {
+  display: flex;
+  align-items: center;
+}
+
+.sign__out .text__sign__icon {
+  width: 15px;
+  margin-left: 5px;
+}
+
+.text__sign__out {
+  font-size: 14px;
+  white-space: pre;
+}
+
+.menu__app > *,
+.menu__app.calendar mat-date-range-input input,
+.mat-date-range-input-separator {
+  font-size: 14px !important;
+}
+
+.menu__app.reset.sign_out.desktop button {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  color: #1a0a2c !important;
+}
+
+.menu__app.reset.sign_out.desktop button img {
+  width: 15px;
+  margin-left: 5px;
+}
+.logout__mb {
+  margin-left: 10px;
+}
+
+.contry__select__mb {
+  background-color: transparent;
+  border: 0;
+  width: 0;
+  background-image: url(../../../assets/img/location-outline.png);
+  background-size: 20px;
+  background-position-x: 30%;
+  background-repeat: no-repeat;
+
+  &:focus {
+    box-shadow: none !important;
+  }
+  option {
+    background-color: #cab4e0;
+  }
+}

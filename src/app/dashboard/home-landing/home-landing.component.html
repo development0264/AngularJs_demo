@@ -1,0 +1,434 @@
+<header id="overview">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-6">
+        <div class="left__side">
+          <div class="menu__app desktop" [routerLink]="['/houm-build']">
+            <div class="icon">
+              <img
+                src="../../../assets/img/video-light.png"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+            <div class="text">Overview</div>
+          </div>
+          <div class="menu__app desktop" [routerLink]="['/consumer-houm']">
+            <div class="icon">
+              <img
+                src="../../../assets/img/Overview Icon.png"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+            <div class="text">Consumer Houms</div>
+          </div>
+          <div class="menu__app mobile">
+            <div class="icon" [routerLink]="['/houm-build']">
+              <img
+                src="../../../assets/img/Houm.me - Call - Mobile (4).png"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+          </div>
+          <div class="menu__app mobile">
+            <div class="icon" [routerLink]="['/consumer-houm']">
+              <img
+                src="../../../assets/img/Overview-menu.png"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="right__side">
+          <div class="menu__app mobile">
+            <select [(ngModel)]="countryName" class="form-select contry__select__mb" (change)="loadData()" aria-label="select country"  >
+              <option selected disabled value="">Country</option>
+              <option value="">All</option>
+              <option  *ngFor="let con of country" value="{{con.name}}">
+                {{ con.name }}
+              </option>
+            </select>
+          </div>
+          <div class="menu__app mobile">
+            <div class="icon" (click)="picker.open()">
+              <img
+                src="../../../assets/img/calendar-main.png"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+
+          </div>
+          <div class="menu__app mobile logout__mb">
+            <div class="icon" (click)="signOut()">
+              <img
+                src="../../../assets/img/light__lock.png"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+
+          </div>
+
+          <div class="menu__app calendar desktop">
+            <div class="icon"></div>
+            <mat-date-range-input
+              separator="to"
+              required
+              [rangePicker]="picker"
+              [formGroup]="range"
+              (click)="picker.open()"
+            >
+              <input matStartDate formControlName="startDate" [(ngModel)]="startDate" placeholder="Start date" />
+              <input matEndDate formControlName="endDate" [(ngModel)]="endDate" (dateChange)="loadData()" placeholder="End date" />
+            </mat-date-range-input>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+          </div>
+          <div class="menu__app country desktop">
+            <div class="icon"></div>
+            <select [(ngModel)]="countryName" class="form-select" aria-label="select country" (change)="loadData()">
+              <option selected disabled value="">Country</option>
+              <option value="">All</option>
+              <option *ngFor="let con of country" [value]="con.name">
+                {{ con.name }}
+              </option>
+            </select>
+          </div>
+          <div class="menu__app export desktop">
+            <button type="button" class="btn sign__out" (click)="signOut()">
+              <div class="text__sign__out">Sign-Out</div>
+              <div class="text__sign__icon"><img src="../../../assets/img/light__lock.png" alt="" class="img-fluid"></div>
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="main__box">
+        <div class="box__get">
+          <div class="top__content">
+            <div class="box__number">
+              <h5>{{data?.live_houms?.total}}</h5>
+            </div>
+            <div class="box__text">Live Houms</div>
+          </div>
+          <div class="main__bottom__box">
+            <div class="box__bottom">
+              <div class="main__box__bottom">
+                <div class="main__box__main">
+                  <div>
+                    <div class="main__font__bold">{{data?.live_houms?.paid}}</div>
+                    <div class="hour__text">Paid Houms</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box__bottom">
+              <div class="main__box__bottom">
+                <div class="main__box__main">
+                  <div>
+                    <div class="main__font__bold">{{data?.live_houms?.trial}}</div>
+                    <div class="hour__text">Trial Houms</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="main__box">
+        <div class="box__get">
+          <div class="top__content">
+            <div class="box__number">
+              <h5>{{data?.calls?.total_unique_houms_used_calls}}</h5>
+            </div>
+            <div class="box__text">Total No. of Houms using Calls</div>
+          </div>
+          <div class="main__bottom__box">
+            <div class="box__bottom">
+              <div class="main__box__bottom">
+                <div class="main__box__main">
+                  <div>
+                    <div class="main__font__bold">{{data?.calls?.total_unique_houms_used_audio_call}}</div>
+                    <div class="hour__text">Audio Calls</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box__bottom">
+              <div class="main__box__bottom">
+                <div class="main__box__main">
+                  <div>
+                    <div class="main__font__bold">{{data?.calls?.total_unique_houms_used_video_call}}</div>
+                    <div class="hour__text">Video Calls</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="main__box">
+        <div class="box__get">
+          <div class="top__content">
+            <div class="box__number">
+              <h5>{{data?.storage?.total_storage_used_in_mb/1000000}}</h5>
+            </div>
+            <div class="box__text">Total Storage Used in MB - All Houms</div>
+          </div>
+          <div class="main__bottom__box">
+            <div class="box__bottom">
+              <div class="main__box__bottom">
+                <div class="main__box__main">
+                  <div>
+                    <div class="main__font__bold">{{data?.storage?.total_unique_houms_used_storage}}</div>
+                    <div class="hour__text">
+                      Total No. of Houms using Storage
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box__bottom">
+              <div class="main__box__bottom">
+                <div class="main__box__main">
+                  <div>
+                    <div class="main__font__bold">{{data?.storage?.total_unique_houms_used_storage_above_100_mb}}</div>
+                    <div class="hour__text">
+                      Total No. of Houms above 100 MB Storages
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="main__box platform">
+        <div class="box__get">
+          <div class="top__content">
+            <div class="box__number">
+              <h5>Number of Houms by Platform</h5>
+            </div>
+          </div>
+          <div class="main__bottom__box">
+            <div class="main__download">
+                <div class="main__lead">
+                  <div class="main__icon">
+                    <img src="../../../assets/img/appstore.png" alt="" class="img-fluid">
+                </div>
+                <div class="platform__name">
+                    App Store
+                </div>
+                </div>
+                <div class="platform__number">
+                  {{data?.houms_by_platforms?.iOS}}
+                </div>
+            </div>
+            <div class="main__download">
+                <div class="main__lead">
+                  <div class="main__icon">
+                    <img src="../../../assets/img/play.png" alt="" class="img-fluid">
+                </div>
+                <div class="platform__name">
+                  Play Store
+                </div>
+                </div>
+                <div class="platform__number">
+                  {{data?.houms_by_platforms?.android}}
+                </div>
+            </div>
+            <div class="main__download">
+                <div class="main__lead">
+                  <div class="main__icon">
+                    <img src="../../../assets/img/web.png" alt="" class="img-fluid">
+                </div>
+                <div class="platform__name">
+                  Web Browser
+                </div>
+                </div>
+                <div class="platform__number">
+                  {{data?.houms_by_platforms?.browser}}
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="main__box second__setup">
+        <div class="box__get">
+          <div class="top__content">
+            <div class="box__number">
+              <h5>{{data?.inheritance?.total_unique_houms_with_inheritence_setup}}</h5>
+            </div>
+            <div class="box__text">No. of Houms with Inheritance Set-up</div>
+          </div>
+        </div>
+        <div class="box__get mt-1">
+          <div class="top__content">
+            <div class="box__number">
+              <h5>{{data?.photo_plate?.total_unique_houms_with_photo_plate_setup}}</h5>
+            </div>
+            <div class="box__text">No. of Houms with Photo-plate Set-up</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="main__box">
+        <div class="box__get">
+          <div class="top__content">
+            <div class="box__number">
+              <h5>{{data?.storage?.total_storage_used_in_mb/1000000}}</h5>
+            </div>
+            <div class="box__text">Total Storage Used in MB - All Houms</div>
+          </div>
+          <div class="main__bottom__box">
+            <div class="box__bottom">
+              <div class="main__box__bottom">
+                <div class="main__box__main">
+                  <div>
+                    <div class="main__font__bold">{{data?.storage?.total_unique_houms_used_storage}}</div>
+                    <div class="hour__text">Total No. of Houms using Storage</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box__bottom">
+              <div class="main__box__bottom">
+                <div class="main__box__main">
+               <div>
+                <div class="main__font__bold">{{data?.storage?.total_unique_houms_used_storage_above_100_mb}}</div>
+                <div class="hour__text">
+                  Total No. of Houms above 100 MB Storages
+                </div>
+               </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row last-box-row">
+    <div class="col-lg-4">
+      <div class="main__box ">
+        <div class="box__get">
+          <div class="top__content">
+            <div class="box__number">
+              <h5>{{data?.deactive?.total}}</h5>
+            </div>
+            <div class="box__text">Deactive</div>
+          </div>
+          <div class="main__bottom__box">
+            <div class="box__bottom">
+              <div class="main__box__bottom">
+                <div class="main__box__main">
+                  <div>
+                    <div class="main__font__bold">{{data?.deactive?.expired}}</div>
+                    <div class="hour__text">Expired Houms</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box__bottom">
+              <div class="main__box__bottom">
+                <div class="main__box__main">
+                 <div>
+                  <div class="main__font__bold">{{data?.deactive?.destroyed}}</div>
+                  <div class="hour__text">Destroyed Houms</div>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="main__box">
+        <div class="box__get">
+          <div class="top__content">
+            <div class="box__number">
+              <h5>{{data?.calls?.total_call_minutes}}</h5>
+            </div>
+            <div class="box__text">Total No. of minutes - Calls</div>
+          </div>
+          <div class="main__bottom__box">
+            <div class="box__bottom">
+              <div class="main__box__bottom">
+                <div class="main__box__main">
+                 <div>
+                  <div class="main__font__bold">{{data?.calls?.total_audio_call_minutes}}</div>
+                  <div class="hour__text">Audio Calls</div>
+                 </div>
+                </div>
+              </div>
+            </div>
+            <div class="box__bottom">
+              <div class="main__box__bottom">
+                <div class="main__box__main">
+                  <div>
+                    <div class="main__font__bold">{{data?.calls?.total_video_call_minutes}}</div>
+                    <div class="hour__text">Video Calls</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="main__box">
+        <div class="box__get h-100 last__box">
+          <div class="main__bottom__box">
+            <div class="box__bottom">
+              <div class="main__box__bottom">
+                <div class="main__box__main">
+                  <div>
+                    <div class="main__font__bold">{{data?.chat?.total_messages}}</div>
+                    <div class="hour__text">Total No. of messages</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box__bottom">
+              <div class="main__box__bottom">
+                <div class="main__box__main">
+               <div>
+                <div class="main__font__bold">{{data?.chat?.total_unique_houms_used_}}</div>
+                <div class="hour__text">
+                  Total No. of Houms Chatting
+                </div>
+               </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

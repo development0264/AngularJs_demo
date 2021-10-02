@@ -1,0 +1,14 @@
+<div class="login__wrp">
+  <div class="container">
+    <div class="text__logo">MIS.Houm.me</div>
+    <div class="mb-3">
+      <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="userId" placeholder="User ID" (keyup.enter)="login()">
+    </div>
+    <div class="mt-5">
+      <input type="password" class="form-control" id="exampleFormControlInput1" [(ngModel)]="password" placeholder="Password" (keyup.enter)="login()"> 
+    </div>
+    <div class="form__submit">
+      <button type="button" class="btn btn-primary" (click)="login()">Login</button>
+    </div>
+  </div>
+</div>

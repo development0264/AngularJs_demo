@@ -1,0 +1,619 @@
+
+
+header{
+  padding-top: 20px;
+  .left__side {
+    display: flex;
+  }
+
+  .menu__app {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+  }
+
+  .menu__app .icon {
+    width: 15px;
+    margin-right: 10px;
+  }
+
+  .menu__app .text{
+    font-family: 'Muli-Bold';
+  }
+
+  .right__side {
+    display: flex;
+    justify-content: flex-end;
+}
+
+}
+
+.export button {
+  background-color: #1A0A2C;
+  color: #CAB4E0;
+  border: 0;
+  height: 33px;
+  border-radius: 10px;
+  margin-left: 20px;
+
+
+
+
+  &:focus{
+    box-shadow: none;
+  }
+
+}
+
+.main__box::-webkit-scrollbar {
+  width: 2px;
+}
+
+.main__box::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+.main__box.second__setup .box__get {
+  padding: 5px 0 !important;
+}
+
+.main__box.platform .box__get {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+.main__box {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  height: 160px;
+  .box__get {
+    background-color: #6B5880;
+    border-radius: 15px;
+    overflow: hidden;
+    .top__content {
+      text-align: center;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+
+
+    .top__content .box__number h5 {
+      margin-bottom: 0;
+      font-size: 16px;
+      color: #fff;
+      font-family: 'Muli-Bold';
+    }
+
+    .top__content .box__text {
+      color: #fff;
+      font-size: 14px;
+      font-family: 'Muli-Light';
+      margin-top: 13px;
+    }
+
+
+  }
+
+  .main__bottom__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+    max-height: 150px;
+}
+
+.main__bottom__box .box__bottom {
+    text-align: center;
+    flex: 0 0 48%;
+    background-color: #443357;
+}
+
+.main__bottom__box .box__bottom .main__box__bottom {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 100px;
+    overflow-y: scroll;
+}
+.main__bottom__box .box__bottom .main__box__bottom::-webkit-scrollbar{
+  background-color: transparent;
+  width: 0;
+}
+
+.main__bottom__box .box__bottom .main__box__bottom  .main__font__bold{
+  font-size: 20px;
+  font-family: 'Muli-Bold';
+  margin-bottom: 14px;
+  color: #fff;
+}
+
+.main__bottom__box .box__bottom:nth-child(1) {
+    border-radius: 0px 15px 0px 15px;
+}
+
+.main__bottom__box .box__bottom:nth-child(2) {
+    border-radius: 15px 0px 15px 0;
+}
+
+.hour__text {
+  font-size: 14px;
+  font-family: 'Muli-Regular';
+  color: #fff;
+  width: 100%;
+  max-width: 150px;
+}
+
+.main__box__main {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__download {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.main__icon {
+  width: 30px;
+}
+.platform__name {
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Muli-Regular';
+}
+
+.platform__number {
+  font-size: 20px;
+  color: #fff;
+  font-family: 'Muli-Bold';
+}
+
+}
+
+
+.platform .top__content {
+  padding: 5px !important;
+}
+
+.platform .box__number h5 {
+  font-size: 16px !important;
+}
+
+
+.last__box {
+  display: flex !important;
+  align-items: center;
+  height: 173px !important;
+}
+
+.last__box .main__bottom__box {
+  height: 100%;
+  max-height: 100% !important;
+  width: 100%;
+}
+
+.last__box .main__box__bottom {
+  height: 100% !important;
+}
+
+@media(max-width:1440px) and (min-width:992px){
+  .main__box .box__get .top__content{
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .main__box .box__get .top__content .box__text{
+    margin-top: 5px;
+  }
+  .second__setup .box__get {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+.platform .box__get {
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+.last__box .main__bottom__box .box__bottom {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+}
+
+
+
+::ng-deep  #overview .calendar mat-form-field {
+  background-color: #1A0A2C;
+}
+
+
+::ng-deep  #overview .calendar input {
+  color: #CAB4E0 !important;
+  cursor: pointer;
+}
+
+::ng-deep  #overview .calendar input::placeholder{
+  color: #CAB4E0 !important;
+}
+::ng-deep  #overview .mat-date-range-input-container{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+::ng-deep  #overview .calendar .mat-form-field-wrapper {
+  padding-bottom: 0 !important;
+}
+
+ .menu__app.calendar.desktop {
+  justify-content: flex-end;
+  margin: 0 !important;
+}
+.menu__app.country.desktop {
+  margin: 0 !important;
+}
+
+::ng-deep  #overview .calendar .mat-form-field-appearance-fill .mat-form-field-infix {border-top: 0 !important; }
+
+::ng-deep  #overview .calendar .mat-form-field-appearance-fill .mat-form-field-flex {padding-top: 0 !important; }
+
+
+
+header .menu__app {
+  height: 33px !important;
+  cursor: pointer;
+}
+
+::ng-deep  #overview .mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+
+::ng-deep   #overview mat-date-range-input {
+  background-color: #1A0A2C;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+::ng-deep   #overview .mat-date-range-input-container {
+  justify-content: center;
+}
+
+
+
+::ng-deep   #overview .country mat-form-field {
+  background-color: #1A0A2C;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+::ng-deep   #overview .mat-select-value {
+  color: #fff !important;
+}
+
+
+
+::ng-deep   #overview  mat-label {
+  color: #fff;
+}
+
+.main__download .main__lead {
+  display: flex;
+  align-items: center;
+}
+
+.main__download .main__lead .main__icon {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+
+.country select.form-select {
+  background-color: #1A0A2C;
+  color: #CAB4E0;
+  border-radius: 10px;
+  border: 0;
+  height: 33px;
+  white-space: nowrap;
+  width: 130px;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.country select.form-select:focus {
+  box-shadow: none;
+  border: 0;
+}
+
+.form-select{
+  background-image: url(./../../../assets/img/caret-down.png);
+  background-size: contain;
+  background-position: right;
+}
+
+@media(max-width:991px){
+  .menu__app .text{
+    display: none;
+  }
+}
+
+.desktop {
+  display: block;
+}
+
+.mobile{
+  display:none !important;
+}
+
+@media(max-width:991px){
+ .desktop{
+     display:none !important;
+ }
+ .mobile{
+      display:block !important;
+ }
+ header {
+  background-color: #1A0A2C;
+  padding-bottom: 20px;
+}
+header .menu__app .icon {
+  width: 20px !important;
+}
+
+header .menu__app:last-child{
+  margin-right: 0 !important;
+}
+
+header .right__side .menu__app:last-child {
+  margin-right: 0 !important;
+}
+::ng-deep #overview header .menu__app {
+  margin-right: 0 !important;
+}
+}
+
+::ng-deep #overview .mat-date-range-input-start-wrapper{
+  width: 100%;
+}
+
+
+.icon img {
+  width: 30px;
+  object-fit: contain;
+  height: 30px;
+}
+
+
+::ng-deep #overview .mat-date-range-input-separator {
+  color: #CAB4E0 !important;
+  margin-left: -4px !important;
+  opacity: 1 !important;
+}
+
+
+.menu__app.mobile .icon {
+  margin-left: 10px;
+}
+
+
+
+
+.sign__out {
+  display: flex;
+  align-items: center;
+}
+
+.btn.sign__out .text__sign__icon {
+  width: 15px;
+}
+
+.btn.sign__out .text__sign__out {
+  white-space: pre;
+  margin-right: 8px;
+}
+
+@media  (max-height:800px) and (min-height:700px){
+
+}
+
+
+@media(max-width:991px){
+  .main__box .box__get{
+    height: 215px !important;
+  }
+  .main__box.second__setup .box__get{
+    height: auto !important;
+  }
+}
+
+
+@media(max-height:650px) and (min-height:645px){
+  .main__box .box__get .top__content{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .main__box  .main__bottom__box{
+    padding-bottom: 0;
+  }
+  .second__setup .box__get{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .main__box .box__get .top__content{
+    padding-top: 12px;
+    padding-bottom: 10px;
+  }
+  .main__box.second__setup .top__content {
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+}
+  .box__get.h-100.last__box .main__bottom__box .box__bottom {
+    padding-top: 37px !important;
+    padding-bottom: 37px !important;
+}
+}
+
+
+@media(max-height:800px) and (min-height:600px){
+  .main__box{
+    height:  auto !important;
+  }
+}
+
+@media(max-height:800px) {
+  .box__get {
+    position: relative;
+}
+
+.main__bottom__box {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+  .main__box .box__get{
+      height: 100%;
+
+  }
+  .main__box .box__get{
+    min-height: 225px;
+  }
+  .main__box.second__setup .box__get {
+    min-height: auto !important;
+    padding-top: 17px !important;
+    padding-bottom: 17px !important;
+}
+.main__box .main__bottom__box .box__bottom .main__box__bottom{
+  height: 180px;
+}
+.last__box .main__bottom__box .box__bottom{
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+.main__box .main__download{
+  margin-top: 15px;
+}
+.main__box .main__download:first-child{
+  margin-top: 0;
+}
+  .main__box .main__box__main {
+    height: auto !important;
+  }
+
+  .main__box .main__bottom__box .box__bottom .main__box__bottom {
+    height: auto !important;
+  }
+
+  .main__box .main__bottom__box {max-height: 107px !important;}
+
+  .main__box .box__get {
+    min-height: 180px !important;
+  }
+
+  body .main__box.second__setup .box__get {
+    padding-top: 7px !important;
+    padding-bottom: 6px !important;
+  }
+
+  .main__box .main__bottom__box .box__bottom .main__box__bottom .main__font__bold {
+    font-size: 16px !important;
+    margin: 0 !important;
+  }
+
+  .main__box .main__icon {
+    width: 20px !important;
+  }
+
+  .main__box .main__bottom__box .box__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main__box .main__download {
+    margin-top: 0 !important;
+  }
+
+  .main__bottom__box {
+  }
+
+  .main__box.platform .box__get .main__bottom__box {
+    bottom: 10px;
+  }
+
+  body .main__box.second__setup .box__get > div {
+      padding: 4px !important;
+  }
+  .main__box.second__setup .box__get .top__content {
+    padding: 5px 0 !important;
+  }
+  .main__box .box__get.last__box .main__bottom__box {
+    max-height: initial !important;
+}
+}
+@media(max-height:670px) {
+  .last-box-row .main__box .box__get {
+    min-height: 160px !important;
+}
+.last-box-row .main__box .box__get .main__bottom__box {
+  height: 50%;
+}
+
+.last-box-row .main__box .box__get.last__box {
+  height: 160px !important;
+}
+
+.last-box-row .main__box .box__get.last__box .main__bottom__box {
+  height: 100%;
+}
+}
+
+
+@media(max-height:800px) and (min-height:750px){
+  .main__box .box__get {
+    min-height: 206px !important;
+  }
+  .main__box.second__setup .box__get {
+    min-height: auto !important;
+    padding-top: 23px !important;
+    padding-bottom: 23px !important;
+}
+  }
+
+
+
+
+  .logout__mb {
+    margin-left: 10px;
+    margin-right: 0 !important;
+}
+
+
+.contry__select__mb {
+  background-color: transparent;
+  border: 0;
+  width: 0;
+  background-image: url(../../../assets/img/location-outline.png);
+  background-size: 20px;
+  background-position-x: 30%;
+  background-repeat: no-repeat;
+
+  &:focus {
+    box-shadow: none !important;
+  }
+  option {
+    background-color: #cab4e0;
+  }
+}
+.menu__app > *,
+.menu__app.calendar mat-date-range-input input,
+.mat-date-range-input-separator {
+  font-size: 14px !important;
+}
